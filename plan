@@ -115,3 +115,7 @@ Tools and Software:
   Test Execution Report
   Bug Reports
   Final Test Report
+
+10. Demo Postman automation test for endpoint /get
+
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/31421972-a9ba3cb0-ce74-427e-b357-00cd331690c8?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D31421972-a9ba3cb0-ce74-427e-b357-00cd331690c8%26entityType%3Dcollection%26workspaceId%3D81c29754-9e6a-4eb9-a25b-b431a07d2af0)
