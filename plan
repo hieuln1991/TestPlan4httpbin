@@ -115,20 +115,3 @@ Tools and Software:
   Test Execution Report
   Bug Reports
   Final Test Report
-
-10. Demo Postman automation test for endpoint /get
-
-<div class="postman-run-button"
-data-postman-action="collection/fork"
-data-postman-visibility="public"
-data-postman-var-1="31421972-a9ba3cb0-ce74-427e-b357-00cd331690c8"
-data-postman-collection-url="entityId=31421972-a9ba3cb0-ce74-427e-b357-00cd331690c8&entityType=collection&workspaceId=81c29754-9e6a-4eb9-a25b-b431a07d2af0"></div>
-<script type="text/javascript">
-  (function (p,o,s,t,m,a,n) {
-    !p[s] && (p[s] = function () { (p[t] || (p[t] = [])).push(arguments); });
-    !o.getElementById(s+t) && o.getElementsByTagName("head")[0].appendChild((
-      (n = o.createElement("script")),
-      (n.id = s+t), (n.async = 1), (n.src = m), n
-    ));
-  }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
-</script>
