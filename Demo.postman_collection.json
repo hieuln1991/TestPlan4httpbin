@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "a9ba3cb0-ce74-427e-b357-00cd331690c8",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31421972",
+		"_collection_link": "https://www.postman.com/speeding-meadow-238423/workspace/demo/collection/31421972-a9ba3cb0-ce74-427e-b357-00cd331690c8?action=share&source=collection_link&creator=31421972"
+	},
+	"item": [
+		{
+			"name": "/get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" // Test Case 1: Verify the GET request returns status 200.",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"// Test Case 2: Verify the response contains the correct headers.",
+							"pm.test(\"Verify Content-Type is application/json\", function () {",
+							"    var contentType = pm.response.headers.get(\"Content-Type\");",
+							"    pm.expect(contentType).to.eql(\"application/json\");",
+							"});",
+							"",
+							"// Test Case 3: Verify the response body contains the expected data.",
+							"// TBD",
+							"",
+							"// Test Case 4: Verify response structure",
+							"var schema = ",
+							"{",
+							"  \"type\": \"object\",",
+							"  \"properties\": {",
+							"    \"args\": {",
+							"      \"type\": \"object\"",
+							"    },",
+							"    \"headers\": {",
+							"      \"type\": \"object\",",
+							"      \"properties\": {",
+							"        \"Accept\": {",
+							"          \"type\": \"string\"",
+							"        },",
+							"        \"Accept-Encoding\": {",
+							"          \"type\": \"string\"",
+							"        },",
+							"        \"Cache-Control\": {",
+							"          \"type\": \"string\"",
+							"        },",
+							"        \"Host\": {",
+							"          \"type\": \"string\"",
+							"        },",
+							"        \"Postman-Token\": {",
+							"          \"type\": \"string\"",
+							"        },",
+							"        \"User-Agent\": {",
+							"          \"type\": \"string\"",
+							"        },",
+							"        \"X-Amzn-Trace-Id\": {",
+							"          \"type\": \"string\"",
+							"        }",
+							"      },",
+							"      \"required\": [",
+							"        \"Accept\",",
+							"        \"Accept-Encoding\",",
+							"        \"Cache-Control\",",
+							"        \"Host\",",
+							"        \"Postman-Token\",",
+							"        \"User-Agent\",",
+							"        \"X-Amzn-Trace-Id\"",
+							"      ]",
+							"    },",
+							"    \"origin\": {",
+							"      \"type\": \"string\"",
+							"    },",
+							"    \"url\": {",
+							"      \"type\": \"string\"",
+							"    }",
+							"  },",
+							"  \"required\": [",
+							"    \"args\",",
+							"    \"headers\",",
+							"    \"origin\",",
+							"    \"url\"",
+							"  ]",
+							"}",
+							"pm.test('Schema is valid', function () {",
+							"    pm.expect(pm.response.to.have.jsonSchema(schema));",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://httpbin.org/get",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
